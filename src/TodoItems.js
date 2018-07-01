@@ -1,8 +1,28 @@
 import React, {Component} from "react";
+import "./style/TodoList.css";
 
 class TodoItems extends Component {
+    constructor(props){
+        super(props);
+
+        this.createTasks = this.createTasks.bind(this);
+    }
+
     createTasks(item){
-        return <li key={item.key}>{item.text}</li>
+        return (
+            <p>
+                <i className="fa fa-times" onClick={() => this.delete(item.key)}key={item.key}></i> 
+                <li>
+                {item.text}
+                </li>
+            </p>
+        )
+    }
+
+    
+
+    delete(key){
+        this.props.delete(key);
     }
 
     render(){

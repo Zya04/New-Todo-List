@@ -27,4 +27,9 @@
     margin-left: 6%;
 }
 
+.fa-times:hover{
+    background-color: #ff3300;
+    cursor: pointer;
+}
+
 /* i tried to put some style but the CSS doesn't apply for the list, I don't understand why */
